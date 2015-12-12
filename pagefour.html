@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title> Final Project Page 4 </title>
+	<link href="styles/styles.css" rel="stylesheet">
+	<link href="lib/jquery.bxslider.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link href="lib/jquery.bxslider.css" rel="stylesheet" />
+</head>
+	<body class="menu">
+
+	<div id="computers">
+	<img class="computer" id="ecomputers" src="images/Eniac.jpg" alt="computer" ></div>
+    <div id="everything">
+	<header>
+		<div id="menu">
+		<a href="#" class="menu-toggle"> Click to Navigate </a>
+		</div>
+			<nav class="menu-side">
+					Table of Contents
+				<div id="contents">
+				<ul>
+					<li><a href="index.html"> Home</a></li>
+					<li><a href="pagetwo.html"> Chapter One</a></li>
+					<li><a href="pagethree.html"> Chapter Two</a></li>
+					<li><a href="pagefour.html"> Chapter Three</a></li>
+					</ul>
+				</div>
+			</nav>
+				</header>
+<h1> Welcome to the Digital Age </h1>
+<h2> The Evolution of 
+Device Ownership 2000-2015 </h2>
+<div id="intro">
+<p> 	At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+</div>
+</div>
+
+
+
+	<script>			
+			(function() {
+				var body = $('body');
+				$('.menu-toggle').bind('click', function() {
+					body.toggleClass('menu-open');
+					return false;
+					});
+			})();
+			</script>	
+<div id="container2">
+<ul class="bxslider">
+  <li><div id="device">
+<h3> Social Media </h3>
+<p> 2015's Most Popular Social Media Sites by Use: Click to see results</p>
+
+<img id="social" class="like" src="images/media.png" alt="graphic">
+<img id="social1" class="like" src="images/media1.png" alt="graphic">
+<img id="social2" class="like" src="images/media2.png" alt="graphic">
+<img id="social3" class="like" src="images/media3.png" alt="graphic">
+<img id="social4" class="like" src="images/media4.png" alt="graphic">
+
+	<div id="talk"><p>Facebook: 72%</p></div>
+    <div id="talk1"><p>Twitter: 23%</p></div>
+    <div id="talk2"><p>Instagram: 28%</p></div>
+    <div id="talk3"><p>Pintrest: 31%</p></div>
+    <div id="talk4"><p>Linkdin: 25%</p></div>
+  
+    </div>
+<script>
+$(document).ready(function(){
+    
+    
+    // function to hide all divs 
+    function hideAll() {
+        $('#talk').hide();
+        $('#talk1').hide();
+        $('#talk2').hide();
+        $('#talk3').hide();
+        $('#talk4').hide();
+       
+    }
+    
+    // run that function right away
+    hideAll();
+    
+    // when any animal is clicked, make the suitable div appear
+    $('.like').click (function() {
+       
+        hideAll();
+       
+        switch ( $(this).attr("id") ) {
+            case "social" :
+                $('#talk').show();
+                break;
+            case "social1" :
+                $('#talk1').show();
+                break;
+            case "social2" :
+                $('#talk2').show();
+                break;
+            case "social3" :
+                $('#talk3').show();
+                break;
+            case "social4" :
+                $('#talk4').show();
+                break;
+          
+        }
+    }); 
+
+    
+});
+</script></li>
+  <li><script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script><div id='myChart'></div>
+		<script>
+		zingchart.THEME="classic";
+var myConfig = 
+        {
+            "type": "bar",
+            "background-color": "#fff",
+            "title": {
+                "text": "Social Media Use 2010-2015 by Percentage",
+                "font-size": "20px",
+                "font-weight": "bold",
+                "font-color": "#000",
+                "background-color": "#fff"
+            },
+            "plot": {
+                "bar-width": "37px",
+                "offset-x":-1,
+                "hover-state": {
+                    "visible": false
+                }
+            },
+            "plotarea":{
+                "margin":"10% 10%"
+                },
+            "labels": [
+  
+            ],
+            "scale-x": {
+                "line-color": "#000",
+                "guide": {
+                    "visible": "false"
+                },
+                "values": [
+                    "2010",
+                    "2011",
+                    "2012",
+                    "2013",
+                    "2014",
+                    "2015"
+                ],
+                "item": {
+                    "font-color": "#000"
+                },
+                "tick": {
+                    "line-color": "#000"
+                }
+            },
+            "scale-y": {
+                "line-color": "#000",
+                "label": {
+                    "item": {
+                        "offset-y": "10px"
+                    },
+                    
+                    "font-size": "10px",
+                    "font-weight": "bold",
+                    "font-color": "#000"
+                },
+                "guide": {
+                    "visible": "false"
+                },
+                "values": "0:100",
+                "item": {
+                    "font-color": "#000"
+                },
+                "tick": {
+                    "line-color": "#000"
+                }
+            },
+            "series": [
+                {
+                    "values": [
+                        60,
+                        65,
+                        67,
+                        73,
+                        74,
+                        76
+                    ],
+                    "styles": [
+                        {
+                            "background-image": "http://www.zingchart.com/images/chartTwitter.png",
+                            "background-repeat": "repeat-y",
+                            "background-fit": "x",
+                            "background-color": "white"
+                        },
+                        {
+                            "background-image": "http://www.zingchart.com/images/chartTwitter.png",
+                            "background-repeat": "repeat-y",
+                            "background-fit": "x",
+                            "background-color": "white"
+                        },
+                        {
+                            "background-image": "http://www.zingchart.com/images/chartTwitter.png",
+                            "background-color": "white",
+                            "background-fit": "x",
+                            "background-repeat": "repeat-y"
+                        },
+                        {
+                            "background-image": "http://www.zingchart.com/images/chartTwitter.png",
+                            "background-color": "white",
+                            "background-fit": "x",
+                            "background-repeat": "repeat-y"
+                        },
+                        {
+                            "background-image": "http://www.zingchart.com/images/chartTwitter.png",
+                            "background-repeat": "repeat-y",
+                            "background-fit": "x",
+                            "background-color": "white"
+                        },
+                           {
+                            "background-image": "http://www.zingchart.com/images/chartTwitter.png",
+                            "background-repeat": "repeat-y",
+                            "background-fit": "x",
+                            "background-color": "white"
+                        }
+                    ]
+                }
+            ]
+        };
+ 
+zingchart.render({ 
+	id : 'myChart', 
+	data : myConfig, 
+	height: 500, 
+	width: 725 
+});
+</script></li>
+
+<li><div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script>
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Demographics of Social Media Use 2010- 2015',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: PewResearch.com',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Age 18-29', 'Age 30-49', 'Age 50-64', 'Age 65+']
+        },
+        yAxis: {
+            title: {
+                text: 'Percentage (%)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: '2010',
+            data: [78, 53, 33, 11]
+        }, {
+            name: '2011',
+            data: [80, 60, 37, 13]
+        }, {
+            name: '2012',
+            data: [83, 67, 43, 19]
+        }, {
+        name: '2013',
+            data: [88, 73, 52, 26]
+        },{
+        name: '2014',
+            data: [84, 77, 52, 27]
+        },
+        {
+            name: '2015',
+            data: [90, 77, 51, 35]
+        }]
+    });
+});
+</script>
+</li>
+</ul>
+</div>
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
+</body>
+</html>
+

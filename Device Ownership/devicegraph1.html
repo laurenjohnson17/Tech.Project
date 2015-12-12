@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title> Graphs </title>
+	<link href="styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="device">
+<h1> Smartphone Ownership: 2010-2015 </h1>
+<p>Smartphone Ownership 2010-2015: Click to see results</p>
+
+<img id="smart" class="phone" src="images/phone.png" alt="graphic">
+<img id="smart1" class="phone" src="images/phone1.png" alt="graphic">
+<img id="smart2" class="phone" src="images/phone2.png" alt="graphic">
+<img id="smart3" class="phone" src="images/phone3.png" alt="graphic">
+<img id="smart4" class="phone" src="images/phone4.png" alt="graphic">
+<img id="smart5" class="phone" src="images/phone5.png" alt="graphic">
+	<div id="telly"><p>2010: no data recorded</p></div>
+    <div id="telly1"><p>2011: 52%</p></div>
+    <div id="telly2"><p>2012: 65%</p></div>
+    <div id="telly3"><p>2013: 79%</p></div>
+    <div id="telly4"><p>2014: 85%</p></div>
+    <div id="telly5"><p>2015: 86%</p></div>
+    </div>
+<script>
+$(document).ready(function(){
+    
+    
+    // function to hide all divs 
+    function hideAll() {
+        $('#telly').hide();
+        $('#telly1').hide();
+        $('#telly2').hide();
+        $('#telly3').hide();
+        $('#telly4').hide();
+        $('#telly5').hide();
+    }
+    
+    // run that function right away
+    hideAll();
+    
+    // when any animal is clicked, make the suitable div appear
+    $('.phone').click (function() {
+       
+        hideAll();
+       
+        switch ( $(this).attr("id") ) {
+            case "smart" :
+                $('#telly').show();
+                break;
+            case "smart1" :
+                $('#telly1').show();
+                break;
+            case "smart2" :
+                $('#telly2').show();
+                break;
+            case "smart3" :
+                $('#telly3').show();
+                break;
+            case "smart4" :
+                $('#telly4').show();
+                break;
+            case "smart5" :
+                $('#telly5').show();
+                break;
+        }
+    }); 
+
+    
+});
+
+
+
+
+</script>
+</body>
+</html>

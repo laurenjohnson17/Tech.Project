@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title> Final Project Page 2 </title>
+	<link href="styles/styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link href="lib/jquery.bxslider.css" rel="stylesheet" />
+  </head>
+	<body class="menu">
+     <div id="computers">
+	<img class="computer" id="ecomputers" src="images/Eniac.jpg" alt="computer" ></div>
+	<div id="everything">
+	<header>
+		<div id="menu">
+		<a href="#" class="menu-toggle"> Click to Navigate </a>
+		</div>
+			<nav class="menu-side">
+					Table of Contents
+				<div id="contents">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="pagetwo.html"> Chapter One</a></li>
+					<li><a href="pagethree.html"> Chapter Two</a></li>
+					<li><a href="pagefour.html"> Chapter Three</a></li>
+					
+					</ul>
+				</div>
+			</nav>
+				</header>
+<h1> Welcome to the Digital Age </h1>
+<h2> The Evolution of Device Ownership 2000-2015 </h2>
+<div id="intro">
+<p> 	At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+</div>
+</div>
+
+
+
+	<script>			
+			(function() {
+				var body = $('body');
+				$('.menu-toggle').bind('click', function() {
+					body.toggleClass('menu-open');
+					return false;
+					});
+			})();
+			</script>
+<div id="container2">
+<ul class="bxslider">
+  <li><div id="device">
+<h3> Internet Access</h3>
+<p>American Adults who use the Internet 2010-2015: Click to see results</p>
+
+<img id="wifi" class="social" src="images/wifi.png" alt="graphic">
+<img id="wifi1" class="social" src="images/wifi1.png" alt="graphic">
+<img id="wifi2" class="social" src="images/wifi2.png" alt="graphic">
+<img id="wifi3" class="social" src="images/wifi3.png" alt="graphic">
+<img id="wifi4" class="social" src="images/wifi4.png" alt="graphic">
+<img id="wifi5" class="social" src="images/wifi5.png" alt="graphic">
+	<div id="establish"><p>2010: 76% </p></div>
+    <div id="establish1"><p>2011: 79%</p></div>
+    <div id="establish2"><p>2012: 83%</p></div>
+    <div id="establish3"><p> 2013: 84% </p></div>
+    <div id="establish4"><p>2014: 84% </p></div>
+    <div id="establish5"><p>2015: 84%</p></div>
+    </div>
+<script>
+$(document).ready(function(){
+    
+    
+    function hideAll() {
+        $('#establish').hide();
+        $('#establish1').hide();
+        $('#establish2').hide();
+        $('#establish3').hide();
+        $('#establish4').hide();
+        $('#establish5').hide();
+    }
+    
+
+    hideAll();
+    
+   
+    $('.social').click (function() {
+       
+        hideAll();
+       
+        switch ( $(this).attr("id") ) {
+            case "wifi" :
+                $('#establish').show();
+                break;
+            case "wifi1" :
+                $('#establish1').show();
+                break;
+            case "wifi2" :
+                $('#establish2').show();
+                break;
+            case "wifi3" :
+                $('#establish3').show();
+                break;
+            case "wifi4" :
+                $('#establish4').show();
+                break;
+            case "wifi5" :
+                $('#establish5').show();
+                break;
+        }
+    }); 
+
+    
+});
+</script></li>
+  <li><script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script><div id='myChart'></div>
+	<script>
+	zingchart.THEME="classic";
+var myConfig = {
+    "graphset": [
+        {
+            "type": "bubble",
+            "background-color": "#f4f4f4 #ffffff",
+            "title": {
+                "text": "Who is not using the internet?",
+                "background-color": "none",
+                "y": "7%",
+                "font-color": "#000000",
+                "font-size": "18px",
+                "font-weight": "bold",
+                "font-family": "Roboto"
+            },
+            "plot": {
+                "scaling": "radius",
+                "size-factor":2.5,
+                "selection-mode": "multiple",
+                "cursor": "hand"
+            },
+            "scale-x": {
+                "values": "0:10:2",
+                "line-width": "1px",
+                "line-color": "#141414",
+                "alpha": "0.25",
+                "item": {
+                    "font-weight": "normal",
+                    "font-family": "Tahoma",
+                    "rules": [
+                        {
+                            "rule": "%v == 0",
+                            "text": "Lowest Volume"
+                        },
+                        {
+                            "rule": "%v >= 2",
+                            "text": ""
+                        },
+                        {
+                            "rule": "%v == 10",
+                            "text": "Highest Volume"
+                        }
+                    ]
+                },
+                "tick": {
+                    "visible": false
+                },
+                "guide": {
+                    "visible": false
+                }
+            },
+            "scale-y": {
+                "visible": false,
+                "values": "0:4:2",
+                "guide": {
+                    "visible": false
+                }
+            },
+            "series": [
+                {
+                    "values": [
+                        [
+                            0,
+                            2,
+                            20
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_LIGHT_VERTICAL",
+                        "background-color": "#6ab9e1",
+                        "alpha": "1"
+                    },
+                    "selected-marker": {
+                        "background-color": "#222222",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 18-29</strong><br>3 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "3 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                },
+                {
+                    "values": [
+                        [
+                            1.75,
+                            2,
+                            25
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_LIGHT_DOWNWARD_DIAGONAL",
+                        "background-color": "#0173C6",
+                        "alpha": "1"
+                    },
+                    "selected-marker": {
+                        "background-color": "#333333",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 30-49</strong><br>6 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "6 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                },
+                {
+                    "values": [
+                        [
+                            3.75,
+                            2,
+                            70
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_SMALL_GRID",
+                        "background-color": "#1876A3",
+                        "alpha": "1"
+                    },
+                    "selected-marker": {
+                        "background-color": "#555555",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>U.S. Adults</strong><br>15 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "15 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                },
+                {
+                    "values": [
+                        [
+                            6.25,
+                            2,
+                            100
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_ZIGZAG",
+                        "background-color": "#1B3542",
+                        "alpha": "0.75"
+                    },
+                    "selected-marker": {
+                        "background-color": "#999999",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 50-64</strong><br>19 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "19 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                
+                    }
+                }
+           ,
+                {
+                    "values": [
+                        [
+                            9,
+                            2,
+                            115
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_LARGE_CHECKER_BOARD",
+                        "background-color": "#008ccb",
+                        "alpha": "0.75"
+                    },
+                    "selected-marker": {
+                        "background-color": "#EEEEEE",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 65+</strong><br>39 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "39 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                }
+                 ],
+            "source": {
+                "font-family": "Tahoma",
+                "font-weight": "normal",
+                "font-style": "italic",
+                "margin-right": "8%",
+                "margin-bottom": "2%"
+            }
+        }
+    ]
+};
+ 
+zingchart.render({ 
+	id : 'myChart', 
+	data : myConfig, 
+	height: 500, 
+	width: 725 
+});
+</script></li>
+  <li><div id="container" style="height: 400px"></div>
+  <script>
+  $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: 'Percentage of American Daily Internet Use'
+        },
+        subtitle: {
+            text: 'Pew Research'
+        },
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'Delivered amount',
+            data: [
+                ['Almost Constantly', 21],
+                ['Several Times a Day', 42],
+                ['About Once a Day', 10],
+                ['Several Times a Week', 6],
+                ['Less Often', 7],
+                ['No Use', 14]
+      
+            ]
+        }]
+    });
+});
+  </script></li>
+
+</ul>
+</div>
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
+
+
+</div>
+</body>
+</html>

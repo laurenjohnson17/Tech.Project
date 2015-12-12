@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title> Graphs </title>
+	<link href="styles/styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+</head>
+<body>
+<div id="device">
+<h1> Internet Access</h1>
+<p>American Adults who use the Internet 2010-2015: Click to see results</p>
+
+<img id="wifi" class="social" src="images/wifi.png" alt="graphic">
+<img id="wifi1" class="social" src="images/wifi1.png" alt="graphic">
+<img id="wifi2" class="social" src="images/wifi2.png" alt="graphic">
+<img id="wifi3" class="social" src="images/wifi3.png" alt="graphic">
+<img id="wifi4" class="social" src="images/wifi4.png" alt="graphic">
+<img id="wifi5" class="social" src="images/wifi5.png" alt="graphic">
+	<div id="establish"><p>2010: 76% </p></div>
+    <div id="establish1"><p>2011: 79%</p></div>
+    <div id="establish2"><p>2012: 83%</p></div>
+    <div id="establish3"><p> 2013: 84% </p></div>
+    <div id="establish4"><p>2014: 84% </p></div>
+    <div id="establish5"><p>2015: 84%</p></div>
+    </div>
+<script>
+$(document).ready(function(){
+    
+    
+    // function to hide all divs 
+    function hideAll() {
+        $('#establish').hide();
+        $('#establish1').hide();
+        $('#establish2').hide();
+        $('#establish3').hide();
+        $('#establish4').hide();
+        $('#establish5').hide();
+    }
+    
+    // run that function right away
+    hideAll();
+    
+    // when any animal is clicked, make the suitable div appear
+    $('.social').click (function() {
+       
+        hideAll();
+       
+        switch ( $(this).attr("id") ) {
+            case "wifi" :
+                $('#establish').show();
+                break;
+            case "wifi1" :
+                $('#establish1').show();
+                break;
+            case "wifi2" :
+                $('#establish2').show();
+                break;
+            case "wifi3" :
+                $('#establish3').show();
+                break;
+            case "wifi4" :
+                $('#establish4').show();
+                break;
+            case "wifi5" :
+                $('#establish5').show();
+                break;
+        }
+    }); 
+
+    
+});
+
+
+
+
+</script>
+</body>
+</html>

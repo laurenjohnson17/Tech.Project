@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title> Graphs </title>
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	</head>
+<body>
+<h1> Social Networking Usage 2010-2015 </h1>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Social Networking Use 2010-2015'
+        },
+        xAxis: {
+            categories: ['2010','2011','2012','2013','2014','2015']
+        },
+        yAxis: {
+            title: {
+                text: 'Percentage of Users'
+            }
+        },
+        series: [{
+            name: 'Internet Users',
+            data: [60, 65, 67, 73, 74,76]
+        }]
+        
+    });
+});
+</script>
+</body>
+</html>
